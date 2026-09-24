@@ -1,0 +1,11 @@
+# Windows
+Thumbs.db
+desktop.ini
+
+# Obsidian
+.obsidian/
+
+# Fichiers temporaires de Packet Tracer et draw.io
+*.pkt.bak
+*.drawio.bak
+*~
