@@ -1,179 +1,206 @@
-<mxfile host="Claude Code" modified="2026-09-11T00:00:00.000Z" agent="Claude Code" version="24.0.0" type="device">
+<mxfile host="Claude Code" modified="2026-09-28T00:00:00.000Z" agent="Claude Code" version="24.0.0" type="device">
   <diagram id="horizon-infra" name="Infrastructure">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1000" math="0" shadow="0">
+    <mxGraphModel dx="1620" dy="920" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1620" pageHeight="920" background="#ffffff" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
 
-        <!-- Titre -->
-        <mxCell id="titre" value="Schéma d'infrastructure · auto-école Horizon" style="text;html=1;align=left;verticalAlign=middle;fontSize=20;fontStyle=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="40" y="20" width="900" height="30" as="geometry"/>
+        <!-- ================= TITRE ================= -->
+        <mxCell id="titre" value="Schéma d'infrastructure · auto-école Horizon" style="text;html=1;align=left;verticalAlign=middle;fontSize=22;fontStyle=1;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="800" height="30" as="geometry"/>
         </mxCell>
-        <mxCell id="soustitre" value="Livrable 2 · Conception et planification · XSIO306 · Adam Cohen · septembre 2026" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;fontColor=#666666;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="40" y="50" width="900" height="20" as="geometry"/>
+        <mxCell id="soustitre" value="Livrable 2 · Conception et planification · XSIO306 · Adam Cohen · septembre 2026" style="text;html=1;align=left;verticalAlign=middle;fontSize=12;fontColor=#666666;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="800" height="20" as="geometry"/>
         </mxCell>
 
         <!-- ================= INTERNET ================= -->
-        <mxCell id="cadre_internet" value="Internet" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#666666;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=13;" vertex="1" parent="1">
-          <mxGeometry x="40" y="90" width="320" height="220" as="geometry"/>
+        <mxCell id="z_internet" value="Internet" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;dashed=1;fillColor=#f5f5f5;strokeColor=#999999;verticalAlign=top;align=left;spacingLeft=12;spacingTop=6;fontStyle=1;fontSize=13;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="300" y="80" width="600" height="150" as="geometry"/>
         </mxCell>
-        <mxCell id="cloud" value="INTERNET&lt;br&gt;accès opérateur" style="shape=mxgraph.networks.cloud;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;aspect=fixed;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="60" y="130" width="120" height="80" as="geometry"/>
+        <mxCell id="cloud" value="INTERNET" style="shape=mxgraph.networks.cloud;html=1;fillColor=#29AAE1;strokeColor=none;fontColor=#ffffff;fontStyle=1;fontSize=12;verticalAlign=middle;align=center;" vertex="1" parent="1">
+          <mxGeometry x="540" y="115" width="120" height="80" as="geometry"/>
         </mxCell>
-        <mxCell id="visiteurs" value="Visiteurs du site&lt;br&gt;Élèves (rappels)" style="shape=mxgraph.networks.users;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;aspect=fixed;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="215" y="118" width="55" height="50" as="geometry"/>
+        <mxCell id="visiteurs" value="&lt;b&gt;Visiteurs du site&lt;/b&gt;&lt;br&gt;élèves et futurs élèves" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="330" y="130" width="160" height="50" as="geometry"/>
         </mxCell>
-        <mxCell id="notif" value="&lt;b&gt;Service de notification externe&lt;/b&gt;&lt;br&gt;rappels de leçon · SMS / e-mail&lt;br&gt;(fonctionnalité 5.4 du CDC)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="200" y="205" width="150" height="90" as="geometry"/>
+        <mxCell id="notif" value="&lt;b&gt;Service de notification&lt;/b&gt;&lt;br&gt;rappels de leçon, SMS ou mail&lt;br&gt;&lt;i&gt;fonctionnalité 5.4 du CDC&lt;/i&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="705" y="120" width="175" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_visiteurs" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeColor=#666666;dashed=1;fontSize=10;fontColor=#444444;labelBackgroundColor=#f5f5f5;" edge="1" parent="1" source="visiteurs" target="cloud">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="f_notif" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;startArrow=classic;strokeColor=#666666;dashed=1;" edge="1" parent="1" source="notif" target="cloud">
+          <mxGeometry relative="1" as="geometry"/>
         </mxCell>
 
         <!-- ================= SIEGE ================= -->
-        <mxCell id="cadre_siege" value="Siège · Agence 1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="40" y="340" width="900" height="540" as="geometry"/>
-        </mxCell>
-        <mxCell id="r1" value="R-Agence1" style="shape=mxgraph.networks.router;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;aspect=fixed;fontSize=11;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="455" y="380" width="80" height="60" as="geometry"/>
-        </mxCell>
-        <mxCell id="r1_info" value="&lt;b&gt;R-Agence1&lt;/b&gt; · Cisco 2911 + module HWIC-2T&lt;br&gt;G0/0 192.168.10.254 · G0/1 192.168.30.254 · G0/2 192.168.40.254&lt;br&gt;Se0/3/0 10.0.0.1 (DCE) · Se0/3/1 203.0.113.2&lt;br&gt;Route statique 192.168.20.0/24 via 10.0.0.2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=8;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="560" y="375" width="360" height="80" as="geometry"/>
+        <mxCell id="z_siege" value="Siège · Agence 1" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#333333;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=6;fontStyle=1;fontSize=15;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="1060" height="540" as="geometry"/>
         </mxCell>
 
-        <!-- Zone Postes A1 -->
-        <mxCell id="zone_postes1" value="Postes · 192.168.10.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f8f8;strokeColor=#999999;dashed=1;verticalAlign=top;align=left;spacingLeft=8;spacingTop=2;fontStyle=1;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="60" y="490" width="270" height="370" as="geometry"/>
+        <mxCell id="r1" value="R-Agence1" style="shape=mxgraph.networks.router;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;labelPosition=right;align=left;spacingLeft=-10;fontSize=12;fontStyle=1;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="560" y="340" width="80" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="sw1" value="SW-Postes-A1 · Cisco 2960" style="shape=mxgraph.networks.switch;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;aspect=fixed;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="155" y="525" width="80" height="40" as="geometry"/>
-        </mxCell>
-        <mxCell id="pc_gerant" value="PC-Gerant&lt;br&gt;192.168.10.1" style="shape=mxgraph.networks.pc;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;aspect=fixed;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="70" y="620" width="50" height="45" as="geometry"/>
-        </mxCell>
-        <mxCell id="pc_resppeda" value="PC-RespPeda&lt;br&gt;192.168.10.2" style="shape=mxgraph.networks.pc;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;aspect=fixed;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="170" y="620" width="50" height="45" as="geometry"/>
-        </mxCell>
-        <mxCell id="pc_secr1" value="PC-Secretaire-A1&lt;br&gt;192.168.10.3" style="shape=mxgraph.networks.pc;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;aspect=fixed;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="270" y="620" width="50" height="45" as="geometry"/>
-        </mxCell>
-        <mxCell id="users1" value="&lt;b&gt;Utilisateurs du siège&lt;/b&gt;&lt;br&gt;Gérant · Responsable pédagogique&lt;br&gt;Secrétaire · Assistant administratif&lt;br&gt;Passerelle 192.168.10.254" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="75" y="745" width="240" height="95" as="geometry"/>
+        <mxCell id="r1_info" value="&lt;b&gt;R-Agence1 · Cisco 2911 + module HWIC-2T&lt;/b&gt;&lt;br&gt;G0/0 · 192.168.10.254 · postes&lt;br&gt;G0/1 · 192.168.30.254 · serveurs&lt;br&gt;G0/2 · 192.168.40.254 · DMZ&lt;br&gt;Se0/3/0 · 10.0.0.1 (DCE) · Se0/3/1 · 203.0.113.2&lt;br&gt;Route statique 192.168.20.0/24 via 10.0.0.2" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=middle;spacingLeft=12;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="70" y="330" width="440" height="110" as="geometry"/>
         </mxCell>
 
-        <!-- Zone Serveurs -->
-        <mxCell id="zone_srv" value="Serveurs · 192.168.30.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f8f8;strokeColor=#999999;dashed=1;verticalAlign=top;align=left;spacingLeft=8;spacingTop=2;fontStyle=1;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="350" y="490" width="330" height="370" as="geometry"/>
+        <!-- Zone postes A1 -->
+        <mxCell id="z_postes1" value="Postes · 192.168.10.0/24" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#aaaaaa;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=12;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="60" y="490" width="320" height="330" as="geometry"/>
         </mxCell>
-        <mxCell id="sw_srv" value="SW-Serveurs · Cisco 2960" style="shape=mxgraph.networks.switch;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;aspect=fixed;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="475" y="525" width="80" height="40" as="geometry"/>
+        <mxCell id="sw1" value="&lt;b&gt;SW-Postes-A1&lt;/b&gt;&lt;br&gt;Cisco 2960" style="shape=mxgraph.networks.switch;html=1;fillColor=#29AAE1;strokeColor=none;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;spacingRight=8;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="180" y="525" width="80" height="35" as="geometry"/>
         </mxCell>
-        <mxCell id="srv_app" value="&lt;b&gt;SRV-APP&lt;/b&gt; · 192.168.30.1&lt;br&gt;Application métier · HTTPS 443&lt;br&gt;Base de données · MySQL 3306" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="360" y="610" width="155" height="65" as="geometry"/>
+        <mxCell id="pc_gerant" value="PC-Gerant&lt;br&gt;192.168.10.1" style="shape=mxgraph.networks.pc;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;fontSize=10;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="95" y="615" width="50" height="42" as="geometry"/>
         </mxCell>
-        <mxCell id="srv_tickets" value="&lt;b&gt;SRV-TICKETS&lt;/b&gt; · 192.168.30.2&lt;br&gt;GLPI · HTTPS 443&lt;br&gt;demandes et incidents (ITIL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="525" y="610" width="145" height="65" as="geometry"/>
+        <mxCell id="pc_resppeda" value="PC-RespPeda&lt;br&gt;192.168.10.2" style="shape=mxgraph.networks.pc;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;fontSize=10;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="195" y="615" width="50" height="42" as="geometry"/>
         </mxCell>
-        <mxCell id="srv_superv" value="&lt;b&gt;SRV-SUPERVISION&lt;/b&gt; · 192.168.30.3&lt;br&gt;Supervision · HTTPS 443&lt;br&gt;disponibilité et alertes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="360" y="695" width="155" height="65" as="geometry"/>
+        <mxCell id="pc_secr1" value="PC-Secretaire-A1&lt;br&gt;192.168.10.3" style="shape=mxgraph.networks.pc;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;fontSize=10;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="295" y="615" width="50" height="42" as="geometry"/>
         </mxCell>
-        <mxCell id="srv_fichiers" value="&lt;b&gt;SRV-FICHIERS&lt;/b&gt; · 192.168.30.4&lt;br&gt;Partage de fichiers · SMB 445&lt;br&gt;Sauvegarde" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="525" y="695" width="145" height="65" as="geometry"/>
+        <mxCell id="users1" value="&lt;b&gt;Utilisateurs du siège&lt;/b&gt;&lt;br&gt;gérant, responsable pédagogique,&lt;br&gt;secrétaire, assistant administratif" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="80" y="730" width="280" height="70" as="geometry"/>
         </mxCell>
-        <mxCell id="admin" value="&lt;b&gt;Prestataire informatique&lt;/b&gt;&lt;br&gt;administration des serveurs · SSH 22" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="400" y="790" width="230" height="50" as="geometry"/>
+
+        <!-- Zone serveurs -->
+        <mxCell id="z_srv" value="Serveurs · 192.168.30.0/24" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#aaaaaa;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=12;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="400" y="490" width="400" height="330" as="geometry"/>
+        </mxCell>
+        <mxCell id="sw_srv" value="&lt;b&gt;SW-Serveurs&lt;/b&gt;&lt;br&gt;Cisco 2960" style="shape=mxgraph.networks.switch;html=1;fillColor=#29AAE1;strokeColor=none;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;spacingLeft=8;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="560" y="525" width="80" height="35" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv_app" value="&lt;b&gt;SRV-APP&lt;/b&gt; · 192.168.30.1&lt;br&gt;application métier · HTTPS 443&lt;br&gt;base de données · MySQL 3306" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="415" y="600" width="170" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv_tickets" value="&lt;b&gt;SRV-TICKETS&lt;/b&gt; · 192.168.30.2&lt;br&gt;GLPI · HTTPS 443&lt;br&gt;demandes et incidents (ITIL)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="615" y="600" width="170" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv_superv" value="&lt;b&gt;SRV-SUPERVISION&lt;/b&gt; · 192.168.30.3&lt;br&gt;supervision · HTTPS 443&lt;br&gt;disponibilité et alertes" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="415" y="680" width="170" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="srv_fichiers" value="&lt;b&gt;SRV-FICHIERS&lt;/b&gt; · 192.168.30.4&lt;br&gt;partage de fichiers · SMB 445&lt;br&gt;sauvegarde" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=10;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="615" y="680" width="170" height="62" as="geometry"/>
+        </mxCell>
+        <mxCell id="admin" value="&lt;b&gt;Prestataire informatique&lt;/b&gt; · administre les serveurs en SSH 22" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="415" y="760" width="370" height="40" as="geometry"/>
         </mxCell>
 
         <!-- Zone DMZ -->
-        <mxCell id="zone_dmz" value="DMZ · 192.168.40.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff8f0;strokeColor=#d79b00;dashed=1;verticalAlign=top;align=left;spacingLeft=8;spacingTop=2;fontStyle=1;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="700" y="490" width="220" height="370" as="geometry"/>
+        <mxCell id="z_dmz" value="DMZ · 192.168.40.0/24" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#fff8f0;strokeColor=#d79b00;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=12;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="820" y="490" width="260" height="330" as="geometry"/>
         </mxCell>
-        <mxCell id="srv_web" value="&lt;b&gt;SRV-WEB&lt;/b&gt; · 192.168.40.1&lt;br&gt;Site vitrine · HTTPS 443&lt;br&gt;Passerelle 192.168.40.254" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="720" y="610" width="180" height="65" as="geometry"/>
+        <mxCell id="srv_web" value="&lt;b&gt;SRV-WEB&lt;/b&gt; · 192.168.40.1&lt;br&gt;site vitrine · HTTPS 443" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="850" y="600" width="200" height="55" as="geometry"/>
         </mxCell>
-        <mxCell id="dmz_note" value="Seul service exposé sur Internet, isolé des données des élèves (CDC 6.5). Le filtrage relève du livrable sécurité." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=10;fontStyle=2;fontColor=#666666;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="715" y="720" width="190" height="80" as="geometry"/>
+        <mxCell id="dmz_note" value="Seul service exposé sur Internet, isolé des données des élèves (CDC 6.5). Le filtrage relève du livrable sécurité." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=11;fontStyle=2;fontColor=#555555;" vertex="1" parent="1">
+          <mxGeometry x="850" y="690" width="200" height="80" as="geometry"/>
         </mxCell>
 
         <!-- ================= AGENCE 2 ================= -->
-        <mxCell id="cadre_a2" value="Agence 2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=14;" vertex="1" parent="1">
-          <mxGeometry x="1000" y="340" width="360" height="540" as="geometry"/>
+        <mxCell id="z_a2" value="Agence 2" style="rounded=1;arcSize=3;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#333333;strokeWidth=2;verticalAlign=top;align=left;spacingLeft=12;spacingTop=6;fontStyle=1;fontSize=15;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="1220" y="300" width="360" height="540" as="geometry"/>
         </mxCell>
-        <mxCell id="r2" value="R-Agence2" style="shape=mxgraph.networks.router;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;aspect=fixed;fontSize=11;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="1140" y="380" width="80" height="60" as="geometry"/>
+        <mxCell id="r2" value="" style="shape=mxgraph.networks.router;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;fontSize=12;fontStyle=1;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="340" width="80" height="60" as="geometry"/>
         </mxCell>
-        <mxCell id="r2_info" value="&lt;b&gt;R-Agence2&lt;/b&gt; · Cisco 2911 + module HWIC-2T&lt;br&gt;G0/0 192.168.20.254 · Se0/3/0 10.0.0.2 (DTE)&lt;br&gt;Route par défaut via 10.0.0.1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=8;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1020" y="462" width="320" height="58" as="geometry"/>
+        <mxCell id="r2_info" value="&lt;b&gt;R-Agence2&lt;/b&gt;&lt;br&gt;Cisco 2911 + HWIC-2T&lt;br&gt;G0/0 · 192.168.20.254&lt;br&gt;Se0/3/0 · 10.0.0.2 (DTE)&lt;br&gt;Route par défaut via 10.0.0.1" style="rounded=1;arcSize=6;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=middle;spacingLeft=10;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="325" width="215" height="95" as="geometry"/>
         </mxCell>
-        <mxCell id="zone_postes2" value="Postes · 192.168.20.0/24" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8f8f8;strokeColor=#999999;dashed=1;verticalAlign=top;align=left;spacingLeft=8;spacingTop=2;fontStyle=1;fontSize=12;" vertex="1" parent="1">
-          <mxGeometry x="1020" y="535" width="320" height="325" as="geometry"/>
+        <mxCell id="z_postes2" value="Postes · 192.168.20.0/24" style="rounded=1;arcSize=4;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#aaaaaa;dashed=1;verticalAlign=top;align=left;spacingLeft=10;spacingTop=4;fontStyle=1;fontSize=12;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="490" width="320" height="330" as="geometry"/>
         </mxCell>
-        <mxCell id="sw2" value="SW-Postes-A2 · Cisco 2960" style="shape=mxgraph.networks.switch;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;aspect=fixed;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1140" y="570" width="80" height="40" as="geometry"/>
+        <mxCell id="sw2" value="&lt;b&gt;SW-Postes-A2&lt;/b&gt;&lt;br&gt;Cisco 2960" style="shape=mxgraph.networks.switch;html=1;fillColor=#29AAE1;strokeColor=none;labelPosition=left;verticalLabelPosition=middle;align=right;verticalAlign=middle;spacingRight=8;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="525" width="80" height="35" as="geometry"/>
         </mxCell>
-        <mxCell id="pc_secr2" value="PC-Secretaire-A2&lt;br&gt;192.168.20.1" style="shape=mxgraph.networks.pc;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;aspect=fixed;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="1070" y="660" width="50" height="45" as="geometry"/>
+        <mxCell id="pc_secr2" value="PC-Secretaire-A2&lt;br&gt;192.168.20.1" style="shape=mxgraph.networks.pc;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;fontSize=10;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="1285" y="615" width="50" height="42" as="geometry"/>
         </mxCell>
-        <mxCell id="pc_monit" value="PC-Moniteurs-A2&lt;br&gt;192.168.20.2" style="shape=mxgraph.networks.pc;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;aspect=fixed;fontSize=10;" vertex="1" parent="1">
-          <mxGeometry x="1240" y="660" width="50" height="45" as="geometry"/>
+        <mxCell id="pc_monit" value="PC-Moniteurs-A2&lt;br&gt;192.168.20.2" style="shape=mxgraph.networks.pc;html=1;fillColor=#29AAE1;strokeColor=none;verticalLabelPosition=bottom;verticalAlign=top;fontSize=10;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="1465" y="615" width="50" height="42" as="geometry"/>
         </mxCell>
-        <mxCell id="users2" value="&lt;b&gt;Utilisateurs de l'agence 2&lt;/b&gt;&lt;br&gt;Secrétaire · Moniteurs&lt;br&gt;Passerelle 192.168.20.254" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="1040" y="770" width="280" height="75" as="geometry"/>
+        <mxCell id="users2" value="&lt;b&gt;Utilisateurs de l'agence 2&lt;/b&gt;&lt;br&gt;secrétaire, moniteurs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="730" width="280" height="70" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= LIAISONS SERIE ================= -->
+        <mxCell id="l_inet" value="Accès Internet · série · 203.0.113.0/30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#b85450;strokeWidth=2;fontSize=11;fontColor=#1a1a1a;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cloud" target="r1">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l_wan" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#b85450;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="r1" target="r2">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l_wan_label" value="&lt;b&gt;Liaison opérateur&lt;/b&gt;&lt;br&gt;série · 10.0.0.0/30" style="text;html=1;align=center;verticalAlign=bottom;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
+          <mxGeometry x="1102" y="325" width="116" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- ================= LIAISONS ETHERNET ================= -->
+        <mxCell id="l_r1_sw1" value="G0/0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#333333;strokeWidth=1.5;fontSize=10;fontColor=#1a1a1a;labelBackgroundColor=#ffffff;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="r1" target="sw1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="460"/>
+              <mxPoint x="220" y="460"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l_r1_swsrv" value="G0/1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#333333;strokeWidth=1.5;fontSize=10;fontColor=#1a1a1a;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="r1" target="sw_srv">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="l_r1_web" value="G0/2 · câble croisé" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#333333;strokeWidth=1.5;fontSize=10;fontColor=#1a1a1a;labelBackgroundColor=#ffffff;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.85;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="r1" target="srv_web">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="460"/>
+              <mxPoint x="1020" y="460"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="l_r2_sw2" value="G0/0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#333333;strokeWidth=1.5;fontSize=10;fontColor=#1a1a1a;labelBackgroundColor=#ffffff;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="r2" target="sw2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1290" y="460"/>
+              <mxPoint x="1400" y="460"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <!-- Postes siege -->
+        <mxCell id="e_pc1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#333333;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sw1" target="pc_gerant">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="220" y="590"/><mxPoint x="120" y="590"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e_pc2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#333333;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sw1" target="pc_resppeda">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_pc3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#333333;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sw1" target="pc_secr1">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="220" y="590"/><mxPoint x="320" y="590"/></Array></mxGeometry>
+        </mxCell>
+
+        <!-- Serveurs : axe central, un embranchement par serveur -->
+        <mxCell id="e_app" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#333333;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sw_srv" target="srv_app">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_tickets" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#333333;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sw_srv" target="srv_tickets">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_superv" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#333333;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sw_srv" target="srv_superv">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_fichiers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#333333;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="sw_srv" target="srv_fichiers">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Postes agence 2 -->
+        <mxCell id="e_pc4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#333333;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sw2" target="pc_secr2">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1400" y="590"/><mxPoint x="1310" y="590"/></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="e_pc5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#333333;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="sw2" target="pc_monit">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1400" y="590"/><mxPoint x="1490" y="590"/></Array></mxGeometry>
         </mxCell>
 
         <!-- ================= LEGENDE ================= -->
-        <mxCell id="legende" value="&lt;b&gt;Légende&lt;/b&gt; · trait rouge : liaison série opérateur · trait noir : Ethernet · pointillé : flux applicatif ou d'administration · passerelles en .254 · 203.0.113.0/24 : préfixe de documentation (RFC 5737) · détail dans « Plan d'adressage »" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=10;fontColor=#444444;strokeColor=none;fillColor=none;" vertex="1" parent="1">
-          <mxGeometry x="40" y="895" width="1320" height="30" as="geometry"/>
-        </mxCell>
-
-        <!-- ================= LIAISONS ================= -->
-        <mxCell id="l_inet" value="203.0.113.0/30&lt;br&gt;série" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=none;strokeColor=#b85450;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="cloud" target="r1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="120" y="325"/>
-              <mxPoint x="430" y="325"/>
-              <mxPoint x="430" y="410"/>
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="l_wan" value="Liaison opérateur · série&lt;br&gt;10.0.0.0/30" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=none;strokeColor=#b85450;strokeWidth=2;fontSize=10;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="r1" target="r2">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="495" y="335"/>
-              <mxPoint x="1180" y="335"/>
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="l_r1_sw1" value="G0/0" style="edgeStyle=orthogonalEdgeStyle;exitX=0.25;exitY=1;exitDx=0;exitDy=0;rounded=0;html=1;endArrow=none;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="r1" target="sw1">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="l_r1_swsrv" value="G0/1" style="edgeStyle=orthogonalEdgeStyle;exitX=0.5;exitY=1;exitDx=0;exitDy=0;rounded=0;html=1;endArrow=none;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="r1" target="sw_srv">
-          <mxGeometry relative="1" as="geometry"/>
-        </mxCell>
-        <mxCell id="l_r1_web" value="G0/2 · croisé" style="edgeStyle=orthogonalEdgeStyle;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.89;entryY=0;entryDx=0;entryDy=0;rounded=0;html=1;endArrow=none;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="r1" target="srv_web">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="515" y="475"/>
-              <mxPoint x="880" y="475"/>
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="l_sw1_pc1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#000000;" edge="1" parent="1" source="sw1" target="pc_gerant"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="l_sw1_pc2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#000000;" edge="1" parent="1" source="sw1" target="pc_resppeda"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="l_sw1_pc3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#000000;" edge="1" parent="1" source="sw1" target="pc_secr1"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="l_swsrv_app" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#000000;" edge="1" parent="1" source="sw_srv" target="srv_app"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="l_swsrv_tickets" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#000000;" edge="1" parent="1" source="sw_srv" target="srv_tickets"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="l_swsrv_superv" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#000000;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="sw_srv" target="srv_superv"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="l_swsrv_fichiers" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#000000;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="sw_srv" target="srv_fichiers"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="l_r2_sw2" value="G0/0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#000000;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="r2" target="sw2"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="l_sw2_pc1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#000000;" edge="1" parent="1" source="sw2" target="pc_secr2"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="l_sw2_pc2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#000000;" edge="1" parent="1" source="sw2" target="pc_monit"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="f_visiteurs" value="HTTPS" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeColor=#666666;dashed=1;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="visiteurs" target="cloud"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="f_notif" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;startArrow=classic;strokeColor=#666666;dashed=1;" edge="1" parent="1" source="notif" target="cloud"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="f_admin" value="SSH 22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=classic;strokeColor=#82b366;dashed=1;fontSize=9;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="admin" target="sw_srv">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="345" y="815"/>
-              <mxPoint x="345" y="545"/>
-            </Array>
-          </mxGeometry>
+        <mxCell id="legende" value="&lt;b&gt;Légende&lt;/b&gt;   trait rouge : liaison série opérateur   ·   trait noir : Ethernet   ·   pointillé : flux applicatif   ·   passerelle de chaque réseau en .254   ·   203.0.113.0/24 : préfixe réservé à la documentation (RFC 5737)   ·   détail dans « Plan d'adressage »" style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=middle;fontSize=11;fontColor=#444444;" vertex="1" parent="1">
+          <mxGeometry x="40" y="860" width="1540" height="30" as="geometry"/>
         </mxCell>
       </root>
     </mxGraphModel>
