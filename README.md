@@ -5,7 +5,9 @@ informatiques**. BTS SIO option SISR, 2e année, EFREI.
 
 Adam Cohen · groupe BTS2-SIO1 · année 2026-2027
 
-Ce dépôt trace l'avancement du projet, livrable par livrable.
+Ce dépôt trace l'avancement du projet, mission par mission.
+
+Planning : [GitHub Projects](https://github.com/users/LKAdammm/projects/1).
 
 ---
 
@@ -23,6 +25,9 @@ Le projet consiste à concevoir et mettre en œuvre son système d'information.
 ---
 
 ## Les livrables
+
+Les dossiers suivent le Monde 1 du parcours : Idéation, Conception et
+planification, Maquettage.
 
 ### 01 · Cahier des charges
 
@@ -65,8 +70,22 @@ Connectivité validée dans les deux sens, captures à l'appui.
 
 ---
 
+### 03 · Maquettage
+
+En cours sur Figma, pour le site vitrine et l'application métier : moodboard,
+charte graphique et wireframes des 4 pages du site vitrine sont faits. Restent
+les personas, le benchmark, l'arborescence, les parcours utilisateur, les
+wireframes des 5 écrans de l'application, les maquettes graphiques, le prototype
+et le test utilisateur.
+
+---
+
 ## Suite prévue
 
-Application web reliée à une base de données et à un service externe, site
-vitrine, gestion de tickets selon ITIL, sauvegarde avec test de restauration,
-supervision, documentation.
+| Monde | Contenu |
+|---|---|
+| 2 | Modèle de données et API REST, développement, tests, infrastructure d'hébergement |
+| 3 | Premier oral blanc, projet professionnel et veille |
+| 4 | Inventaire, habilitations, charte utilisateur, GLPI et ITIL, pannes simulées |
+| 5 | Deuxième oral blanc, portfolio |
+| 6 | Audit de sécurité, continuité et sauvegarde, mise en production, mesure d'audience, troisième oral blanc |
