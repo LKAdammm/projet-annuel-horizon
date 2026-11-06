@@ -72,6 +72,8 @@ Connectivité validée dans les deux sens, captures à l'appui.
 
 ### 03 · Maquettage
 
+Fichier Figma : [Horizon · Maquettage](https://www.figma.com/design/rmD2VxxiW7KICzMycwAr11).
+
 En cours sur Figma, pour le site vitrine et l'application métier : moodboard,
 charte graphique et wireframes des 4 pages du site vitrine sont faits. Restent
 les personas, le benchmark, l'arborescence, les parcours utilisateur, les
