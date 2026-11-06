@@ -95,7 +95,7 @@
         <mxCell id="srv_web" value="&lt;b&gt;SRV-WEB&lt;/b&gt; · 192.168.40.1&lt;br&gt;site vitrine · HTTPS 443" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=11;fontColor=#1a1a1a;" vertex="1" parent="1">
           <mxGeometry x="850" y="600" width="200" height="55" as="geometry"/>
         </mxCell>
-        <mxCell id="dmz_note" value="Seul service exposé sur Internet, isolé des données des élèves (CDC 6.5). Le filtrage relève du livrable sécurité." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=11;fontStyle=2;fontColor=#555555;" vertex="1" parent="1">
+        <mxCell id="dmz_note" value="Seul service exposé sur Internet, isolé des données des élèves (CDC 6.5). Filtrage par R-Agence1, voir le plan d'adressage." style="text;html=1;whiteSpace=wrap;align=left;verticalAlign=top;fontSize=11;fontStyle=2;fontColor=#555555;" vertex="1" parent="1">
           <mxGeometry x="850" y="690" width="200" height="80" as="geometry"/>
         </mxCell>
 

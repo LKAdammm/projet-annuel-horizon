@@ -32,7 +32,8 @@ planification, Maquettage.
 ### 01 · Cahier des charges
 
 Cahier des charges simplifié en six parties, selon la méthode du cours, avec
-priorisation MoSCoW des fonctionnalités (8 Must, 3 Should, 1 Could, 1 Won't).
+priorisation MoSCoW des fonctionnalités (8 Must, 3 Should, 1 Could, 1 Won't),
+besoins non fonctionnels vérifiables, méthode projet et grandes étapes.
 Les 18 contraintes obligatoires du sujet y sont traduites en besoins métier.
 
 | Fichier | Contenu |
@@ -48,6 +49,8 @@ planification du projet.
 | Fichier | Contenu |
 |---|---|
 | `02-conception-planification/plan-adressage.md` | sous-réseaux, équipements, routage et justifications |
+| `02-conception-planification/schema-architecture.drawio` | schéma d'architecture : composants logiciels et flux, source draw.io |
+| `02-conception-planification/schema-architecture.png` | le même, exporté |
 | `02-conception-planification/schema-infrastructure.drawio` | schéma d'infrastructure, source draw.io |
 | `02-conception-planification/schema-infrastructure.png` | le même, exporté |
 | `02-conception-planification/schema-reseau.pkt` | maquette Cisco Packet Tracer 9.0.1 |

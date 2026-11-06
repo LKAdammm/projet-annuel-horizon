@@ -11,7 +11,7 @@ tags: [horizon, cahier-des-charges]
 
 **Module XSIO306 : Support et mise à disposition de services informatiques**
 Adam, BTS SIO option SISR, 2ᵉ année, EFREI
-Version 1, septembre 2026
+Version 2, novembre 2026
 
 ---
 
@@ -356,3 +356,47 @@ Aucune technologie n'est imposée. Les choix devront être justifiés au regard 
 ### 6.13 Budget et délais
 
 Le budget est contraint par la taille de l'entreprise : les solutions open source ou déjà disponibles seront privilégiées lorsqu'elles répondent au besoin. Le projet devra être déployé sans interrompre l'activité de formation des deux agences.
+
+---
+
+## 7. Besoins non fonctionnels
+
+Ces besoins disent comment le système doit rendre le service. Chacun peut être vérifié lors de la recette.
+
+| Domaine | Besoin | Vérification |
+|---|---|---|
+| **Performance** | Afficher le planning d'une journée en moins de 3 secondes depuis chaque agence | Mesure depuis un poste de chaque agence |
+| **Performance** | Rester utilisable avec 14 salariés connectés en même temps | Test de charge en recette |
+| **Disponibilité** | Rendre le planning et les dossiers élèves accessibles pendant les horaires d'ouverture des agences | Relevé de disponibilité de la supervision |
+| **Sécurité** | Exiger une connexion individuelle pour toute donnée d'élève, et tout échange chiffré depuis Internet | Essai d'accès sans compte, contrôle du certificat |
+| **Sécurité** | N'autoriser à chaque profil que les données de son rôle | Essai de chaque profil sur la matrice des droits |
+| **Ergonomie** | Permettre à une secrétaire d'inscrire un élève sans formation préalable, et à un moniteur de saisir la progression en moins d'une minute | Test utilisateur du prototype |
+| **Compatibilité** | Fonctionner sur les navigateurs récents, sur ordinateur et sur téléphone pour les moniteurs et les élèves | Essai sur Chrome, Edge, Firefox et un téléphone |
+| **Accessibilité** | Respecter un contraste de texte d'au moins 4,5:1 sur le site et l'application | Contrôle de la charte graphique |
+
+---
+
+## 8. Méthode et planning
+
+### 8.1 Méthode projet
+
+Le projet est conduit selon une **méthode agile légère**, par itérations courtes suivies sur un tableau kanban. Ce choix s'appuie sur trois constats :
+
+- les besoins s'affinent en avançant : les retours de l'intervenant et des tests utilisateurs modifient les priorités ;
+- des retours réguliers sont possibles, à chaque mission et à chaque oral blanc ;
+- une version partielle a déjà de la valeur : le site vitrine et le planning peuvent servir avant que tout le système soit terminé.
+
+Le cycle en V a été écarté : il suppose des besoins stables et une seule livraison en fin de projet. Sa logique reste utile sur un point : chaque service est testé et validé avant sa mise en production (partie 6.10).
+
+### 8.2 Grandes étapes
+
+| Étape | Contenu | Jalon |
+|---|---|---|
+| Conception | Cahier des charges, architecture, réseau, maquettes | Prototype testé |
+| Développement | Base de données, application, site vitrine | Version de recette |
+| Tests | Cahier de recette, anomalies, procès-verbal | Recette signée |
+| Exploitation | Infrastructure, GLPI, droits, charte, pannes simulées | Service opérationnel |
+| Sécurisation et mise en production | Audit, sauvegarde, restauration, déploiement, mesure | Version finale en ligne |
+| Documentation | Dossier technique, supports utilisateurs | Dossier complet |
+
+Le détail daté, avec les responsables et l'avancement réel, est tenu à jour sur le planning du projet : https://github.com/users/LKAdammm/projects/1

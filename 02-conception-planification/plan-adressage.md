@@ -46,6 +46,27 @@ Source des schémas réseau et d'infrastructure du livrable 2. Établi le 08/09/
 - R-Agence1 : route statique `192.168.20.0/24` via `10.0.0.2`
 - R-Agence2 : route par défaut `0.0.0.0/0` via `10.0.0.1`
 
+## Segmentation et filtrage
+
+Le filtrage est porté par **R-Agence1**, par lequel passent tous les échanges entre les réseaux du siège, l'agence 2 et Internet. Principe du moindre privilège : ce qui n'est pas autorisé ci-dessous est interdit.
+
+| Source | Destination | Service | Décision |
+|---|---|---|---|
+| Internet | SRV-WEB (DMZ) | HTTPS 443 | autorisé |
+| SRV-WEB | SRV-APP | HTTPS 443, demande de rendez-vous | autorisé |
+| Postes des deux agences | SRV-APP, SRV-TICKETS | HTTPS 443 | autorisé |
+| Postes des deux agences | SRV-FICHIERS | SMB 445 | autorisé |
+| Serveurs | Internet | HTTPS 443, service de notification et mises à jour | autorisé |
+| SRV-SUPERVISION | tous les équipements | supervision | autorisé |
+| Prestataire informatique | serveurs | SSH 22 | autorisé |
+| Internet | postes et serveurs | tout | **interdit** |
+| DMZ | postes et serveurs | tout le reste | **interdit** |
+
+Ce tableau est la règle à appliquer. La maquette Packet Tracer valide le routage et la connectivité : les listes de contrôle d'accès restent à y ajouter et à tester.
+
+- **Pas de pare-feu dédié à ce stade** : le routeur filtre déjà par listes de contrôle d'accès, et le budget est contraint (partie 6.13 du cahier des charges). Un pare-feu dédié devient pertinent si l'exposition augmente.
+- **Pas de VLAN** : chaque réseau a son propre commutateur, la séparation est donc physique. Un VLAN deviendrait utile si plusieurs réseaux devaient partager un même commutateur, par exemple dans une troisième agence.
+
 ## Choix à justifier à l'oral
 
 - **Trois sous-réseaux au siège** : les postes, les serveurs et la DMZ sont séparés pour pouvoir filtrer les flux entre eux, comme l'exige la partie 6.5 du cahier des charges.
