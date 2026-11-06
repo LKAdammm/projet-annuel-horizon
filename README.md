@@ -77,11 +77,14 @@ Connectivité validée dans les deux sens, captures à l'appui.
 
 Fichier Figma : [Horizon · Maquettage](https://www.figma.com/design/rmD2VxxiW7KICzMycwAr11).
 
-En cours sur Figma, pour le site vitrine et l'application métier : moodboard,
-charte graphique et wireframes des 4 pages du site vitrine sont faits. Restent
-les personas, le benchmark, l'arborescence, les parcours utilisateur, les
-wireframes des 5 écrans de l'application, les maquettes graphiques, le prototype
-et le test utilisateur.
+Démarche centrée utilisateur pour le site vitrine et l'application métier :
+personas, benchmark, arborescence, parcours utilisateur, moodboard, charte
+graphique, 9 wireframes, 9 maquettes graphiques et un prototype interactif.
+
+Prototype : [site vitrine](https://www.figma.com/proto/rmD2VxxiW7KICzMycwAr11?node-id=15-40&starting-point-node-id=15%3A40),
+[application métier](https://www.figma.com/proto/rmD2VxxiW7KICzMycwAr11?node-id=14-371&starting-point-node-id=14%3A371).
+
+Reste à faire : le test du prototype par un autre étudiant.
 
 ---
 
